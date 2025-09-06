@@ -18,10 +18,10 @@ const premiumFile = "./базы данных/premiumuser.json";
 const adminFile = "./базы данных/adminuser.json";
 const ownerFile = "./базы данных/owneruser.json";
 const TOKENS_FILE = "./tokens.json";
-const ownerID = 6976749991; // Ganti ID owner kamu
-const prosesImg = "https://files.catbox.moe/hy8km5.jpg";
+const ownerID = 7653566720; // Ganti ID owner kamu
+const prosesImg = "https://files.catbox.moe/7vuwwh.jpg";
 //ISI PAKAI LINK FOTOMU
-const successImg = "https://files.catbox.moe/76o04f.jpg";
+const successImg = "https://files.catbox.moe/iex1fq.jpg";
 //ISI PAKAI LINK FOTOMU
 
 let bots = [];

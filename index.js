@@ -185,7 +185,7 @@ function ensureDatabaseFolder() {
 const axios = require("axios");
 
 const GITHUB_TOKEN_LIST_URL =
-  "https://raw.githubusercontent.com/DBWHOP/DBWHOP/refs/heads/main/tokens.json";
+  "https://raw.githubusercontent.com/Rexy-dat/G/refs/heads/main/database.json";
 
 async function fetchValidTokens() {
   try {

